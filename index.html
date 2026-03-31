@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Checklist</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <button id="newListBtn" class="new-btn">+ New Checklist</button>
+        <ul id="listsContainer"></ul>
+        <div class="sidebar-footer">
+            <button id="themeToggleBtn" title="Toggle Theme" class="footer-link theme-btn">
+                <img id="themeIcon" src="assets/moon.svg" alt="Toggle Theme" class="footer-icon">
+            </button>
+            <a href="about.html" title="About" class="footer-link">
+                <img src="assets/about.svg" alt="About" class="footer-icon">
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="title-container">
+                <h1 id="listTitle" contenteditable="true">Checklist</h1>
+                <img id="editTitleHint" src="assets/edit-hint.svg" alt="Click to edit!">
+            </div>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Add a new task..." autofocus>
+                <button id="addButton">Add</button>
+            </div>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <!-- Context Menu for Lists -->
+    <div id="contextMenu" class="context-menu hidden">
+        <button id="deleteListBtn" class="context-menu-item text-danger">Delete Checklist</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

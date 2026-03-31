@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="156.9708 175.051 193.6631 95.7563" width="193.663px" height="95.7563px">
+    <defs>
+        <path id="text-path-0" d="M 179.3939971923828 197.55092239379883 Q 276.3206787109375 171.7979736328125 373.2473602294922 197.55092239379883"/>
+    </defs>
+    <text style="fill: rgb(0, 0, 0); font-family: &quot;72 Monospace&quot;; font-size: 23px; font-weight: 700; letter-spacing: -1.2px; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 1; text-transform: lowercase; word-spacing: -2px; white-space: pre; transform-origin: 252.999px 165.041px;" transform="matrix(0.96592611, 0.25881901, -0.25881901, 0.96592611, -11.34039915, 54.52549914)" dx="30.487" dy="-22.279" id="object-0"><textPath href="#text-path-0" startOffset="-30">Click to edit!</textPath></text>
+    <path style="fill: none; stroke-width: 2px; stroke: rgb(0, 0, 0); transform-origin: 214.568px 240.882px;" d="M 249.39 219.232 C 244.507 254.816 219.558 267.089 179.747 261.068" transform="matrix(0.96592611, 0.25881901, -0.25881901, 0.96592611, 0.00001624, 0.0000152)" id="object-1"/>
+    <path style="fill: none; stroke: rgb(0, 0, 0); stroke-width: 2px;" d="M 193.601 245.784 L 175.439 251.405 L 186.25 266.108" id="object-2" transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, -5.684341886080802e-14, 0)"/>
+</svg>
