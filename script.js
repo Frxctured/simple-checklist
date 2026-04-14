@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const deleteListBtn = document.getElementById("deleteListBtn");
     let currentContextListId = null;
 
+    // Mobile Header Elements
+    const mobileHeader = document.getElementById("mobileHeader");
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const sidebar = document.getElementById("sidebar");
+
     const LOCAL_STORAGE_KEY = "simple-checklist-data";
     
     // Structure: { activeListId: id, lists: [{ id, title, tasks: [] }] }
@@ -245,4 +250,29 @@ document.addEventListener("DOMContentLoaded", () => {
     if (sessionStorage.getItem("hasEditedTitle")) {
         editTitleHint.classList.add("hidden");
     }
+
+    // Mobile menu handlers
+    hamburgerBtn.addEventListener("click", () => {
+        hamburgerBtn.classList.toggle("active");
+        sidebar.classList.toggle("open");
+    });
+
+    // Close sidebar when clicking on a list
+    listsContainer.addEventListener("click", () => {
+        hamburgerBtn.classList.remove("active");
+        sidebar.classList.remove("open");
+    });
+
+    // Close sidebar when clicking outside (on mobile)
+    document.addEventListener("click", (e) => {
+        if (!contextMenu.contains(e.target) && !sidebar.contains(e.target) && e.target !== hamburgerBtn && !hamburgerBtn.contains(e.target)) {
+            closeContextMenu();
+        }
+        
+        // Close sidebar on mobile when clicking content area
+        if (window.innerWidth <= 768 && !sidebar.contains(e.target) && e.target !== hamburgerBtn && !hamburgerBtn.contains(e.target)) {
+            hamburgerBtn.classList.remove("active");
+            sidebar.classList.remove("open");
+        }
+    });
 });

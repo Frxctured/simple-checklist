@@ -2,22 +2,24 @@ const savedTheme = localStorage.getItem('simple-checklist-theme') || 'light';
 document.documentElement.setAttribute('data-theme', savedTheme);
 
 document.addEventListener("DOMContentLoaded", () => {
-    const themeToggleBtn = document.getElementById("themeToggleBtn");
-    const themeIcon = document.getElementById("themeIcon");
+    const themeToggleBtns = document.querySelectorAll(".themeToggleBtn");
+    const themeIcons = document.querySelectorAll(".themeIcon");
 
-    if (themeToggleBtn && themeIcon) {
+    if (themeToggleBtns.length > 0) {
         if (savedTheme === 'dark') {
-            themeIcon.src = "assets/sun.svg";
+            themeIcons.forEach(icon => icon.src = "assets/sun.svg");
         }
 
-        themeToggleBtn.addEventListener("click", () => {
-            const currentTheme = document.documentElement.getAttribute("data-theme");
-            const newTheme = currentTheme === "light" ? "dark" : "light";
-            
-            document.documentElement.setAttribute("data-theme", newTheme);
-            localStorage.setItem("simple-checklist-theme", newTheme);
-            
-            themeIcon.src = newTheme === "dark" ? "assets/sun.svg" : "assets/moon.svg";
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const currentTheme = document.documentElement.getAttribute("data-theme");
+                const newTheme = currentTheme === "light" ? "dark" : "light";
+                
+                document.documentElement.setAttribute("data-theme", newTheme);
+                localStorage.setItem("simple-checklist-theme", newTheme);
+                
+                themeIcons.forEach(icon => icon.src = newTheme === "dark" ? "assets/sun.svg" : "assets/moon.svg");
+            });
         });
     }
 });
