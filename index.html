@@ -11,7 +11,15 @@
 </head>
 
 <body>
-    <div class="sidebar">
+    <div id="mobileHeader" class="mobile-header hidden">
+        <button id="hamburgerBtn" class="hamburger-btn" title="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h1 class="mobile-title">Simple Checklist</h1>
+    </div>
+    <div class="sidebar" id="sidebar">
         <button id="newListBtn" class="new-btn">+ New Checklist</button>
         <ul id="listsContainer"></ul>
         <div class="sidebar-footer">
